@@ -13,6 +13,12 @@
         android:theme="@style/Theme.Tugas"
         tools:targetApi="31">
         <activity
+            android:name=".Test_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Test"
+            android:exported="false" />
+        <activity
             android:name=".Equipper"
             android:exported="false" />
         <activity

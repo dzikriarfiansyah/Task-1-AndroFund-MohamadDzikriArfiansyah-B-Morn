@@ -15,6 +15,9 @@ class Branda : AppCompatActivity(), View.OnClickListener {
         val btnbranda: Button = findViewById(R.id.button_branda)
         btnbranda.setOnClickListener(this)
 
+        val btnFragment: Button = findViewById(R.id.btn_fragment)
+        btnFragment.setOnClickListener(this)
+
     }
 
     override fun onClick(v: View?) {
@@ -26,6 +29,11 @@ class Branda : AppCompatActivity(), View.OnClickListener {
                     intent.action = Intent.ACTION_SEND
                     intent.putExtra(Intent.EXTRA_TEXT, message)
                     intent.type = "text/plain"
+                    startActivity(intent)
+                }
+
+                R.id.btn_fragment -> {
+                    val intent = Intent(this@Branda, Test_Activity::class.java)
                     startActivity(intent)
                 }
             }
